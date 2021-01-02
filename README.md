@@ -3,7 +3,7 @@
 
 ## CHAPTER 6
 
--  203p Tick() 함수, SpringArm 의 내부 멤버 변수 접근시 Get, Set 필요
+-  203p ABCharacter.cpp Tick() 
 
 From
 ```cpp
@@ -14,7 +14,7 @@ To
 SpringArm->SetRelativeRotation(FMath::RInterpTo(SpringArm->GetRelativeRotation(), ArmRotationTo, DeltaTime, ArmRotationSpeed));
 ```
 
-- 204p ViewChange() 함수 , SpringArm 의 내부 멤버 변수 접근시 Get, Set 필요
+- 204p ABCharacter.cpp ViewChange() 
 
 
 From
