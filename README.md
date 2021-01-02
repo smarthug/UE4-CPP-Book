@@ -1,0 +1,20 @@
+# UE4-CPP-Book
+이득우의 언리얼 C++ 게임 개발의 정석 UE4 4.25.4로 진행했을때 막히는 부분 정리 
+
+
+## CHAPTER 8
+
+- NextAttackCheck 노티파이의 위치가 한 섹션이 끝나는 지점에 가까워질수록 노티파이실행->다음섹션 명령을 내려도 OnMontageEnded 가 실행되서 콤보가 안될 확률이 높다. (출처 - https://blackpinkjisoo.tistory.com/17)
+
+
+## CHAPTER 11
+- 358p
+
+FROM
+```cpp
+  ABCHECK(ABCharacterTAble->RowMap.Num()>0);
+```
+TO
+```cpp
+  ABCHECK(ABCharacterTAble->GetRowMap().Num()>0);
+```
