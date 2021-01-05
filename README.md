@@ -29,7 +29,7 @@ GetController()->SetControlRotation(SpringArm->GetRelativeRotation());
 
 ## CHAPTER 8
 - 272p 동작하는 4.25.4 버전의 montage UI 
-![montage](/img/sample.jpg)
+![montage](/img/fixed.png)
 
 - NextAttackCheck 노티파이의 위치가 한 섹션이 끝나는 지점에 가까워질수록 노티파이실행->다음섹션 명령을 내려도 OnMontageEnded 가 실행되서 콤보가 안될 확률이 높다. (출처 - https://blackpinkjisoo.tistory.com/17)
 
