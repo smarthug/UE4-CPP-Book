@@ -46,6 +46,50 @@ TO
   ABCHECK(ABCharacterTAble->GetRowMap().Num()>0);
 ```
 
+## CHAPTER 12
+- 399p ABAIController.h
+
+FROM
+```cpp
+  virtual void Possess(APawn* InPawn) override;
+  virtual void UnPossess() override;
+```
+TO
+```cpp
+  virtual void OnPossess(APawn* InPawn) override;
+  virtual void OnUnPossess() override;
+```
+
+- 400p ABAIController.cpp
+
+FROM
+```cpp
+void AABAIController::Possess(APawn* InPawn)
+{
+	Super::Possess(InPawn);
+	...
+}
+
+void AABAIController::UnPossess()
+{
+	Super::UnPossess();
+	...
+}
+```
+TO
+```cpp
+void AABAIController::OnPossess(APawn* InPawn)
+{
+	Super::OnPossess(InPawn);
+	...
+}
+
+void AABAIController::OnUnPossess()
+{
+	Super::OnUnPossess();
+	...
+}
+```
 
 
 ### Contribution
