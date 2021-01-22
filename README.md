@@ -115,6 +115,19 @@ void AABCharacter::PossessedBy(AController* NewController)
 }
 ```
 
+- 444p
+```cpp
+public:
+	...
+	void Attack();
+	FOnAttackEndDelegate OnAttackEnd;
+
+private:
+	...
+	// 원래 선언되어있던 Attack 함수 주석 처리하거나 없애기
+	/*void Attack();*/ 
+```
+
 
 ### Contribution
 - 언리얼 네이버 카페 글 https://cafe.naver.com/unrealenginekr/34246?boardType=L
