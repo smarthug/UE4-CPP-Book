@@ -1,5 +1,5 @@
 # UE4-CPP-Book
-이득우의 언리얼 C++ 게임 개발의 정석  4.25.4 버전으로 진행했을때 막히는 부분 정리 
+이득우의 언리얼 C++ 게임 개발의 정석  4.25.4 버전으로 진행했을때 막히는 부분 정리. [정오표](http://www.acornpub.co.kr/book/unreal-c#errata)에 없는 부분만 작성하였습니다.  
 
 ## CHAPTER 6
 
@@ -91,6 +91,31 @@ void AABAIController::OnUnPossess()
 }
 ```
 
+- 432p - 오류가 아닌 팁 #3 참고
+possessedBy 를 override 하면은 원래의 possessedBy 에서 자동으로 처리해주던 부분을 수동으로 해야합니다. 
+ABCharacter 생성자 -> AI Controller 빙의 -> PossessedBy 순서로 진행되는데 
+AI 컨트롤러가 빙의되면서 컨트롤 설정이 바뀌고 바뀐 설정을 재설정 해야합니다.
+그래서 생성자에서 이미 호출한 SetControlMode(EControlMode::Diablo) 를 PossessedBy 에서 또 호출할 필요가 있는것입니다.
+```cpp
+void AABCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+
+	if (IsPlayerControlled())
+	{
+
+		SetControlMode(EControlMode::DIABLO);
+		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+	}
+	else
+	{
+		SetControlMode(EControlMode::NPC);
+		GetCharacterMovement()->MaxWalkSpeed = 300.0f;
+	}
+}
+```
+
 
 ### Contribution
-- https://cafe.naver.com/unrealenginekr/34246?boardType=L
+- 언리얼 네이버 카페 글 https://cafe.naver.com/unrealenginekr/34246?boardType=L
+- 정오표 http://www.acornpub.co.kr/book/unreal-c#errata
