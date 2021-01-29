@@ -128,6 +128,18 @@ private:
 	/*void Attack();*/ 
 ```
 
+## Chapter 13
+- 470p 
+- ... 생략됨 , 기존에 있던거 지우지말기
+```cpp
+void AABCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	...
+}
+```
+
 
 ### Contribution
 - 언리얼 네이버 카페 글 https://cafe.naver.com/unrealenginekr/34246?boardType=L
