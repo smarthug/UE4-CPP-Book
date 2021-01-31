@@ -140,6 +140,42 @@ void AABCharacter::BeginPlay()
 }
 ```
 
+## Chapter 14
+
+- 505,6,7p
+
+
+FROM
+```cpp
+bCanBeDamaged = false;
+bCanBeDamaged = true;
+```
+TO
+```cpp
+SetCanBeDamaged(true);
+SetCanBeDamaged(false);
+
+```
+
+
+- 510p
+
+
+FROM
+```cpp
+void AABAIController::Possess(APawn* InPawn)
+{
+	Super::Possess(InPawn);
+}
+```
+TO
+```cpp
+void AABAIController::OnPossess(APawn* InPawn)
+{
+	Super::OnPossess(InPawn);
+}
+
+```
 
 ### Contribution
 - 언리얼 네이버 카페 글 https://cafe.naver.com/unrealenginekr/34246?boardType=L
