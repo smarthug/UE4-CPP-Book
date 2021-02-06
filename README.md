@@ -155,6 +155,31 @@ void AABAIController::OnPossess(APawn* InPawn)
 
 ```
 
+
+- 538p
+
+FROM
+```cpp
+float AABCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	...
+	auto ABPlayerController = Cast<AABPlayerController>(EventInstigator);
+	ABCHECK(nullptr != ABPlayerController, 0.0f);
+	ABPlayerController->NPCKill(this);
+}
+```
+TO
+```cpp
+float AABCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	...
+	auto instigator = Cast<AABPlayerControlle(EventInstigator);
+	ABCHECK(nullptr != instigator, 0.0f);
+	instigator->NPCKill(this);
+}
+
+```
+
 ### Contribution
 - 언리얼 네이버 카페 글 https://cafe.naver.com/unrealenginekr/34246?boardType=L
 - 정오표 http://www.acornpub.co.kr/book/unreal-c#errata
