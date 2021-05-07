@@ -173,7 +173,7 @@ TO
 float AABCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	...
-	auto instigator = Cast<AABPlayerControlle(EventInstigator);
+	auto instigator = Cast<AABPlayerController>(EventInstigator);
 	ABCHECK(nullptr != instigator, 0.0f);
 	instigator->NPCKill(this);
 }
