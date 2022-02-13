@@ -202,5 +202,4 @@ if (bIsPlayer)
 ```
 
 ### Contribution
-- 언리얼 네이버 카페 글 https://cafe.naver.com/unrealenginekr/34246?boardType=L
 - 정오표 http://www.acornpub.co.kr/book/unreal-c#errata
