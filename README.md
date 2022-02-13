@@ -1,5 +1,5 @@
 # UE4-CPP-Book
-이득우의 언리얼 C++ 게임 개발의 정석  4.25.4 버전으로 진행했을때 막히는 부분 정리. 마지막  완료하였습니다. [정오표](http://www.acornpub.co.kr/book/unreal-c#errata)에 없는 부분만 작성하였습니다.  
+이득우의 언리얼 C++ 게임 개발의 정석  4.25.4 버전으로 진행했을때 막히는 부분 정리.  [정오표](http://www.acornpub.co.kr/book/unreal-c#errata)에 없는 부분만 작성하였습니다.  
 
 ## CHAPTER 6
 
